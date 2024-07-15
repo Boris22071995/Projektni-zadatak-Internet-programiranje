@@ -1,18 +1,18 @@
 package org.unibl.program.Service;
 
-import io.swagger.v3.oas.annotations.servers.Server;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.unibl.program.Entity.Category;
-import org.unibl.program.Entity.Contact;
 import org.unibl.program.Entity.Requests.CategoryRequest;
-import org.unibl.program.Entity.Requests.ContactRequest;
-import org.unibl.program.Repository.CategoryRepository;
+import org.unibl.program.exception.CategoryNotFoundException;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public interface CategoryService {
     List<Category> getAll();
-    Category createCategory();
+    Category createCategory(CategoryRequest categoryRequest);
+    Optional<Category> getCategory(Integer id) throws CategoryNotFoundException;
+
+
 }

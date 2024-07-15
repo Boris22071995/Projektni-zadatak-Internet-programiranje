@@ -1,13 +1,17 @@
 package org.unibl.program.Entity.Requests;
 
-import lombok.Data;
+import lombok.*;
+
+import javax.validation.constraints.NotBlank;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class CategoryRequest {
-    private Integer idcategory;
+    private Integer idCategory;
     private String name;
     @Override
     public String toString(){
-        return idcategory + name;
+        return idCategory + name;
     }
 }

@@ -1,17 +1,19 @@
 package org.unibl.program.Entity;
 
-import lombok.Data;
+import lombok.*;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.persistence.*;
 
 @Data
 @Entity
-@Table
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Slf4j
 public class Category {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "idcategory")
-    private Integer idcategory;
-    @Column(name = "name")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer idCategory;
     private String name;
 }
