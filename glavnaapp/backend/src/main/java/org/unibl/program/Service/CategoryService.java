@@ -13,6 +13,6 @@ public interface CategoryService {
     List<Category> getAll();
     Category createCategory(CategoryRequest categoryRequest);
     Optional<Category> getCategory(Integer id) throws CategoryNotFoundException;
-
+    void delete(Integer id);
 
 }

@@ -39,4 +39,8 @@ public class CategoryController {
         return category.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable("id") Integer id) {
+        categoryService.delete(id);
+    }
 }
