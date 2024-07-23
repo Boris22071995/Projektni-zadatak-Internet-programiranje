@@ -2,6 +2,7 @@ package org.unibl.program.Service.Implementation;
 
 import io.swagger.models.auth.In;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.unibl.program.Entity.AtributeValue;
@@ -19,6 +20,7 @@ public class AtributeValueServiceImpl implements AtributeValueService {
     private final AtributeValueRepository atributeValueRepository;
     public AtributeValueServiceImpl(AtributeValueRepository atributeValueRepository) {this.atributeValueRepository = atributeValueRepository;}
 
+
     @Override
     public List<AtributeValue> getAll() {
         return atributeValueRepository.findAll();
@@ -35,13 +37,14 @@ public class AtributeValueServiceImpl implements AtributeValueService {
     }
 
     @Override
-    public Optional<AtributeValue> getAtributeValue(Integer id, Integer id2, Integer id3) {
-        log.info("Getting atribute value with id: " + id + ", " + id2 + ", " + id3);
-        return atributeValueRepository.findById(id,id2,id3);
+    public Optional<AtributeValue> getAtributeValue(Integer id) {
+        log.info("Getting attriuteValue with id: " + id);
+        return atributeValueRepository.findById(id);
     }
 
     @Override
-    public void delete(Integer id, Integer id2, Integer id3) {
-        atributeValueRepository.deleteById(id,id2,id3);
+    public void delete(Integer id) {
+        atributeValueRepository.deleteById(id);
+
     }
 }

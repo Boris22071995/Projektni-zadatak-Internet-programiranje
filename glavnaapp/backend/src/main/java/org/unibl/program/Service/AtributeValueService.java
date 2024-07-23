@@ -12,6 +12,6 @@ import java.util.Optional;
 public interface AtributeValueService {
     List<AtributeValue> getAll();
     AtributeValue createAtributeValue(AtributeValueRequest atributeValueRequest);
-    Optional<AtributeValue> getAtributeValue(Integer id, Integer id2, Integer id3);
-    void delete(Integer id, Integer id2, Integer id3);
+    Optional<AtributeValue> getAtributeValue(Integer id);
+    void delete(Integer id);
 }

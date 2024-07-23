@@ -23,17 +23,17 @@ public class AtributeValueController {
     @PostMapping
     public ResponseEntity<AtributeValue> createAtributeValue(@Valid @RequestBody AtributeValueRequest atributeValueRequest) {
         AtributeValue atributeValue = atributeValueService.createAtributeValue(atributeValueRequest);
-        return new ResponseEntity<>(atributeValue, HttpStatus.CREATED);
+        return new ResponseEntity<>(atributeValue,HttpStatus.CREATED);
     }
 
-    @GetMapping("/{id}/{id2}/{id3}")
-    public ResponseEntity<AtributeValue> getAtributeValue(@PathVariable("id") Integer id, @PathVariable("id2") Integer id2, @PathVariable("id3") Integer id3) {
-        Optional<AtributeValue> atributeValue = atributeValueService.getAtributeValue(id,id2,id3);
+    @GetMapping("/{id}")
+    public ResponseEntity<AtributeValue> getAtributeValue(@PathVariable("id") Integer id) {
+        Optional<AtributeValue> atributeValue = atributeValueService.getAtributeValue(id);
         return atributeValue.map(ResponseEntity::ok).orElseGet(()->ResponseEntity.notFound().build());
     }
 
-    @DeleteMapping("/{id}/{id2}/{id3}")
-    public void delete(@PathVariable("id") Integer id, @PathVariable("id2") Integer id2, @PathVariable("id3") Integer id3) {
-        atributeValueService.delete(id,id2,id3);
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable("id") Integer id) {
+        atributeValueService.delete(id);
     }
 }
