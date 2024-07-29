@@ -23,11 +23,5 @@ public class Replay {
     @Basic
     @Column(name = "questionidQuestion")
     private Integer questionidQuestion;
-    @Basic
-    @Column(name = "questionUserIdUser")
-    private Integer questionUserIdUser;
-    @Basic
-    @Column(name = "questionProgramIdProgram")
-    private Integer questionProgramIdProgram;
 
 }

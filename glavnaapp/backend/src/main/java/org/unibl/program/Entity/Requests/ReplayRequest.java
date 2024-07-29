@@ -10,6 +10,4 @@ import lombok.NoArgsConstructor;
 public class ReplayRequest {
     private Integer idReplay;
     private Integer questionidQuestion;
-    private Integer questionUserIdUser;
-    private Integer questionProgramIdProgram;
 }

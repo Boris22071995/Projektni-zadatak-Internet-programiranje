@@ -18,15 +18,11 @@ import java.io.Serializable;
 @Table(name = "question")
 public class Question implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idQuestion")
     private Integer idQuestion;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "userIdUser")
     private Integer userIdUser;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "programIdProgram")
     private Integer programIdProgram;
     @Basic

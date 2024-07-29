@@ -1,5 +1,6 @@
 package org.unibl.program.Entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,14 +21,15 @@ import java.sql.Date;
 public class UserHasProgram implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idUserHasProgram")
+    private Integer idUserHasProgram;
     @Column(name = "userIdUser")
     private Integer userIdUser;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "programIdProgram")
     private Integer programIdProgram;
     @Basic
     @Column(name = "date")
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd-MM-yyyy")
     private Date date;
     @Basic
     @Column(name = "paymentMethod")

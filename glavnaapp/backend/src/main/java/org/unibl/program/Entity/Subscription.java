@@ -1,5 +1,6 @@
 package org.unibl.program.Entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -30,6 +31,7 @@ public class Subscription implements Serializable {
     private Integer user_idUser;
     @Basic
     @Column(name = "date")
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd-MM-yyyy")
     private Date date;
 
 }
