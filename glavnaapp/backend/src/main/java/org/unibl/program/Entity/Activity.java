@@ -1,5 +1,6 @@
 package org.unibl.program.Entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,8 +23,6 @@ public class Activity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idActivity")
     private Integer idActivity;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "diaryidDiary")
     private Integer diaryidDiary;
     @Basic
@@ -40,6 +39,7 @@ public class Activity implements Serializable {
     private Integer duration;
     @Basic
     @Column(name = "date")
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd-MM-yyyy")
     private Date date;
     @Basic
     @Column(name = "result")

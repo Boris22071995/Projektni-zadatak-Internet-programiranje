@@ -10,6 +10,7 @@ import java.sql.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SubscriptionRequest {
+    private Integer idSubscription;
     private Integer category_idCategory;
     private Integer user_idUser;
     private Date date;

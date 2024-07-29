@@ -20,10 +20,12 @@ import java.sql.Date;
 public class Subscription implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idSubscription")
+    private Integer idSubscription;
+
     @Column(name = "category_idCategory")
     private Integer category_idCategory;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Column(name = "user_idUser")
     private Integer user_idUser;
     @Basic
