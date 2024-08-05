@@ -1,0 +1,19 @@
+<h1>Add new category</h1>
+
+
+<form
+   [formGroup]="form">
+
+<label for="idCat">Id Category</label>
+<input formControlName="idCategory" type="number" id="idCat" />
+
+<label for="catName">Category name</label>
+<input formControlName="name" type="text" id="catName" />
+
+
+<!--<input type="submit" value="Posalji" (click)="add()" />-->
+<div class="example-button-row">
+    <button mat-flat-button (click)="add()" class="bojaPlava">Basic</button>
+</div>
+</form>
+
