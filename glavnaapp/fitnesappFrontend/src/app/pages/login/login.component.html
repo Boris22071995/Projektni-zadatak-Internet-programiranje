@@ -1,21 +1,26 @@
-<div class="login-container">
-    <div class="login-content">
-        <p class="title">Login</p>
-        <p class="title-intro">Welcome back</p>
-        <mat-form-field appearance="outline">
-            <mat-label>Username</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
-            <mat-label>Password</mat-label>
-            <input matInput type="password">
-        </mat-form-field>
-
-        <p class="forgot-label">Forgot Password?</p>
-        <p class="alternative">Don't have an account? <span>Signup</span></p>
-        <div class="or-line-divider">
-            <p>Or</p>
+<title>Slide navbar</title>
+<!-- <link rel="stylesheet" type="text/css" href="slidestyle.css"> -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap">
+ <body>
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+        
+        <div class="signup">
+            <form>
+                <label for="chk" aria-hidden="true"></label>
+                <input type="text" name="txt" placeholder="User name" required="">
+                <input type="email" name="email" placeholder="Email" required="">
+                <input type="password" name="pswd" placeholder="Password" required="">
+                <button>Sign up</button>
+            </form>
+        </div>
+        <div class="login">
+            <form >
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="email" name="email" placeholder="Email" required="">
+                <input type="password" name="pswd" placeholder="Password" required="">
+                <button>Login</button>
+            </form>
         </div>
     </div>
-</div>
+ </body>
