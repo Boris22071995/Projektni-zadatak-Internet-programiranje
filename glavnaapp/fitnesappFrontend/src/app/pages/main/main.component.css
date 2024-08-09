@@ -1,0 +1,40 @@
+.bckround {
+    background-image: url(fitnes2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    column-gap: 8px;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
+.example-card {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  
+  .example-header-image {
+    /* background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg'); */
+    background-image: url(fitness.jpg);
+    background-size: cover;
+  }
+
+  .navtop {
+    display: flex;
+  }
+  /* .navtop .column {
+    align-self:flex-end;
+  }
+
+  .logbut {
+    display: flex;
+    padding-left: 80%;
+    column-gap: 15px;
+  } */
+  .column {
+    display: flex;
+    column-gap: 10px;
+    padding-left: 85%;
+  }
+ 

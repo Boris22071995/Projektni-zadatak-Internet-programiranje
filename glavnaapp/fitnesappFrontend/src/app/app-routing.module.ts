@@ -4,15 +4,16 @@ import { HomeComponentComponent } from './components/home-component/home-compone
 import { LoginComponentComponent } from './components/login-component/login-component.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
+import { MainComponent } from './pages/main/main.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: RegistrationComponent
+    component: MainComponent
   },
   {
     path: 'login',
-    component: LoginComponentComponent,
+    component: LoginComponent,
   }
 ];
 

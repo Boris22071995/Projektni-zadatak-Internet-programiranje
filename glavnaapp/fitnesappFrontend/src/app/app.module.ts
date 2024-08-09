@@ -15,6 +15,16 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { LoginComponent } from './pages/login/login.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { GoogleLoginCardComponent } from './components/google-login-card/google-login-card.component';
+import { MainComponent } from './pages/main/main.component';
+
+
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +32,8 @@ import { GoogleLoginCardComponent } from './components/google-login-card/google-
     LoginComponentComponent,
     LoginComponent,
     RegistrationComponent,
-    GoogleLoginCardComponent
+    GoogleLoginCardComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
@@ -33,8 +44,12 @@ import { GoogleLoginCardComponent } from './components/google-login-card/google-
     ReactiveFormsModule,
     NoopAnimationsModule,
     MatButtonModule,
+    MatSidenavModule,
     MatIconModule,
+    MatToolbarModule,
+    MatListModule,
     MatInputModule,
+    MatCardModule,
     MatFormFieldModule
   ],
   providers: [],

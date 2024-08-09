@@ -1,26 +1,16 @@
-<title>Slide navbar</title>
-<!-- <link rel="stylesheet" type="text/css" href="slidestyle.css"> -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap">
- <body>
-    <div class="main">
-        <input type="checkbox" id="chk" aria-hidden="true">
-        
-        <div class="signup">
-            <form>
-                <label for="chk" aria-hidden="true"></label>
-                <input type="text" name="txt" placeholder="User name" required="">
-                <input type="email" name="email" placeholder="Email" required="">
-                <input type="password" name="pswd" placeholder="Password" required="">
-                <button>Sign up</button>
-            </form>
-        </div>
-        <div class="login">
-            <form >
-                <label for="chk" aria-hidden="true">Login</label>
-                <input type="email" name="email" placeholder="Email" required="">
-                <input type="password" name="pswd" placeholder="Password" required="">
-                <button>Login</button>
-            </form>
-        </div>
-    </div>
- </body>
+<body>
+    <section class="container">
+        <header>Prijava</header>
+        <form action="#" class="form">
+            <div class="input-box">
+                <label for="usrName">Ime</label>
+                <input formControlName="userName" type="text" id="usrName" placeholder="Unesite korisničko ime" style="height: 40px;" required/>
+            </div>
+            <div class="input-box">
+                <label for="usrPassword">Lozinka</label>
+                <input formControlName="password" type="password" id="usrPassword" placeholder="Unesite lozinku" style="height: 40px;" required/>
+            </div>
+            <button class="btn2" style="height: 45px;" type="submit">Prijava</button>
+        </form>
+    </section>
+</body>
