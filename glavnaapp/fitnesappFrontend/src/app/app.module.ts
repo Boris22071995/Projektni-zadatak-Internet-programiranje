@@ -22,6 +22,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -50,6 +51,7 @@ import {MatCardModule} from '@angular/material/card';
     MatListModule,
     MatInputModule,
     MatCardModule,
+    MatPaginatorModule,
     MatFormFieldModule
   ],
   providers: [],

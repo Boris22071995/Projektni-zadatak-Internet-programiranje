@@ -1,166 +1,182 @@
 <body>
-    <mat-toolbar color="#C0C0C0;" class="navtop">
-        <mat-toolbar-row>
-            <button mat-icon-button>
-                <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
-            </button>
-            <h1>Fitnes online</h1>
-            <div class="column">
-            <button mat-icon-button class="logbut">
-                <!-- <label for="logButt">Prijava</label> -->
-              <a routerLink="/login">  <mat-icon name="logButt" title="Prijava">login</mat-icon>  </a>         
-            </button>
-            <mat-icon style="padding-top: 10%;">face</mat-icon>
-        </div>
-        </mat-toolbar-row>
-        <div class="column">
-            
-        </div>
-    </mat-toolbar>
-    <mat-sidenav-container>
-        <mat-sidenav #sidenav opened="true" mode="side" color="#C0C0C0;">
-            <mat-nav-list>
-                <a mat-list-item>Home</a>
-                <a mat-list-item>Account</a>
-                <a mat-list-item>About us</a>
-                <a mat-list-item>Contact us</a>
-                <a mat-list-item>Help</a>
-            </mat-nav-list>
-        </mat-sidenav>
-        <mat-sidenav-content>
-            <div style="height: 88vh;" class="bckround">              
+  <mat-toolbar color="#C0C0C0;" class="navtop">
+      <mat-toolbar-row>
+          <button mat-icon-button>
+              <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+          </button>
+          <h1>Fitnes online</h1>
+          <div class="column">
+          <button mat-icon-button class="logbut">
+              <!-- <label for="logButt">Prijava</label> -->
+            <a routerLink="/login">  <mat-icon name="logButt" title="Prijava">login</mat-icon>  </a>         
+          </button>
+      </div>
+      </mat-toolbar-row>
+     
+  </mat-toolbar>
+  <mat-sidenav-container>
+      <mat-sidenav #sidenav opened="true" mode="side" color="#C0C0C0;">
+          <mat-nav-list>
+              <a mat-list-item>Home</a>
+              <a mat-list-item>Account</a>
+              <a mat-list-item>About us</a>
+              <a mat-list-item>Contact us</a>
+              <a mat-list-item>Help</a>
+              <a mat-list-item><input type="search" placeholder="Pretraga" class="search-input"><mat-icon>search</mat-icon></a>
+              <a mat-list-item>
+                <select class="select-box">
+                <option hidden>Sortiraj</option>
+                <option>Rastuce</option>
+                <option>Opadajuce</option>
+              </select>
+              <mat-icon>sort</mat-icon>
+            </a>
+          </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content class="cont">
+          <div style="height: 88vh;" class="bckround"> 
+            <div class="content">
+              <div class="cards">
                 <mat-card class="example-card" appearance="outlined">
-                    <mat-card-header>
-                      <div mat-card-avatar class="example-header-image"></div>
-                      <mat-card-title>Program</mat-card-title>
-                      <mat-card-subtitle>Trcanje</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image src="fitness.jpg" alt="Fitness program" height="125px" width="100px">
-                    <mat-card-content>
-                      <p>
-                        Opis programa...
-                      </p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                      <button mat-button>LIKE</button>
-                      <button mat-button>SHARE</button>
-                    </mat-card-actions>
-                  </mat-card>
+                  <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Program</mat-card-title>
+                    <mat-card-subtitle>Biciklizam</mat-card-subtitle>
+                  </mat-card-header>
+                  <img mat-card-image src="fitness.jpg" alt="Fitness program" height="125px" width="100px">
+                  <mat-card-content>
+                    <p>
+                      Opis programa...
+                    </p>
+                  </mat-card-content>
+                  <!-- <mat-card-actions>
+                    <button mat-button>LIKE</button>
+                    <button mat-button>SHARE</button>
+                  </mat-card-actions> -->
+                </mat-card>
 
-                  <mat-card class="example-card" appearance="outlined">
-                    <mat-card-header>
-                      <div mat-card-avatar class="example-header-image"></div>
-                      <mat-card-title>Program</mat-card-title>
-                      <mat-card-subtitle>Trcanje</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image src="fitness.jpg" alt="Fitness program" height="125px" width="100px">
-                    <mat-card-content>
-                      <p>
-                        Opis programa...
-                      </p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                      <button mat-button>LIKE</button>
-                      <button mat-button>SHARE</button>
-                    </mat-card-actions>
-                  </mat-card>
+                <mat-card class="example-card" appearance="outlined">
+                  <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Program</mat-card-title>
+                    <mat-card-subtitle>Biciklizam</mat-card-subtitle>
+                  </mat-card-header>
+                  <img mat-card-image src="fitness.jpg" alt="Fitness program" height="125px" width="100px">
+                  <mat-card-content>
+                    <p>
+                      Opis programa...
+                    </p>
+                  </mat-card-content>
+                </mat-card>
 
-                  <mat-card class="example-card" appearance="outlined">
-                    <mat-card-header>
-                      <div mat-card-avatar class="example-header-image"></div>
-                      <mat-card-title>Program</mat-card-title>
-                      <mat-card-subtitle>Plivanje</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image src="fitness.jpg" alt="Fitness program" height="125px" width="100px">
-                    <mat-card-content>
-                      <p>
-                        Opis programa...
-                      </p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                      <button mat-button>LIKE</button>
-                      <button mat-button>SHARE</button>
-                    </mat-card-actions>
-                  </mat-card>
+                <mat-card class="example-card" appearance="outlined">
+                  <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Program</mat-card-title>
+                    <mat-card-subtitle>Biciklizam</mat-card-subtitle>
+                  </mat-card-header>
+                  <img mat-card-image src="fitness.jpg" alt="Fitness program" height="125px" width="100px">
+                  <mat-card-content>
+                    <p>
+                      Opis programa...
+                    </p>
+                  </mat-card-content>
+                  
+                </mat-card>
 
-                  <mat-card class="example-card" appearance="outlined">
-                    <mat-card-header>
-                      <div mat-card-avatar class="example-header-image"></div>
-                      <mat-card-title>Program</mat-card-title>
-                      <mat-card-subtitle>Teretana</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image src="fitness.jpg" alt="Fitness program" height="125px" width="100px">
-                    <mat-card-content>
-                      <p>
-                        Opis programa...
-                      </p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                      <button mat-button>LIKE</button>
-                      <button mat-button>SHARE</button>
-                    </mat-card-actions>
-                  </mat-card>
+                <mat-card class="example-card" appearance="outlined">
+                  <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Program</mat-card-title>
+                    <mat-card-subtitle>Biciklizam</mat-card-subtitle>
+                  </mat-card-header>
+                  <img mat-card-image src="fitness.jpg" alt="Fitness program" height="125px" width="100px">
+                  <mat-card-content>
+                    <p>
+                      Opis programa...
+                    </p>
+                  </mat-card-content>
+                  
+                </mat-card>
 
-                  <mat-card class="example-card" appearance="outlined">
-                    <mat-card-header>
-                      <div mat-card-avatar class="example-header-image"></div>
-                      <mat-card-title>Program</mat-card-title>
-                      <mat-card-subtitle>Biciklizam</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image src="fitness.jpg" alt="Fitness program" height="125px" width="100px">
-                    <mat-card-content>
-                      <p>
-                        Opis programa...
-                      </p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                      <button mat-button>LIKE</button>
-                      <button mat-button>SHARE</button>
-                    </mat-card-actions>
-                  </mat-card>
+                <mat-card class="example-card" appearance="outlined">
+                  <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Program</mat-card-title>
+                    <mat-card-subtitle>Biciklizam</mat-card-subtitle>
+                  </mat-card-header>
+                  <img mat-card-image src="fitness.jpg" alt="Fitness program" height="125px" width="100px">
+                  <mat-card-content>
+                    <p>
+                      Opis programa...
+                    </p>
+                  </mat-card-content>
+                
+                </mat-card>
 
-                  <mat-card class="example-card" appearance="outlined">
-                    <mat-card-header>
-                      <div mat-card-avatar class="example-header-image"></div>
-                      <mat-card-title>Program</mat-card-title>
-                      <mat-card-subtitle>Parkour</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image src="fitness.jpg" alt="Fitness program" height="125px" width="100px">
-                    <mat-card-content>
-                      <p>
-                        Opis programa...
-                      </p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                      <button mat-button>LIKE</button>
-                      <button mat-button>SHARE</button>
-                    </mat-card-actions>
-                  </mat-card>
+                <mat-card class="example-card" appearance="outlined">
+                  <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Program</mat-card-title>
+                    <mat-card-subtitle>Biciklizam</mat-card-subtitle>
+                  </mat-card-header>
+                  <img mat-card-image src="fitness.jpg" alt="Fitness program" height="125px" width="100px">
+                  <mat-card-content>
+                    <p>
+                      Opis programa...
+                    </p>
+                  </mat-card-content>
+                
+                </mat-card>
 
-                  <mat-card class="example-card" appearance="outlined">
-                    <mat-card-header>
-                      <div mat-card-avatar class="example-header-image"></div>
-                      <mat-card-title>Program</mat-card-title>
-                      <mat-card-subtitle>Dizanje tegova</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image src="fitness.jpg" alt="Fitness program" height="125px" width="100px">
-                    <mat-card-content>
-                      <p>
-                        Opis programa...
-                      </p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                      <button mat-button>LIKE</button>
-                      <button mat-button>SHARE</button>
-                    </mat-card-actions>
-                  </mat-card>            
-              
-              
-              
-                <!-- <router-outlet>
+                <mat-card class="example-card" appearance="outlined">
+                  <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Program</mat-card-title>
+                    <mat-card-subtitle>Biciklizam</mat-card-subtitle>
+                  </mat-card-header>
+                  <img mat-card-image src="fitness.jpg" alt="Fitness program" height="125px" width="100px">
+                  <mat-card-content>
+                    <p>
+                      Opis programa...
+                    </p>
+                  </mat-card-content>
+                
+                </mat-card>
 
-                </router-outlet> -->
+                <mat-card class="example-card" appearance="outlined">
+                  <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Program</mat-card-title>
+                    <mat-card-subtitle>Biciklizam</mat-card-subtitle>
+                  </mat-card-header>
+                  <img mat-card-image src="fitness.jpg" alt="Fitness program" height="125px" width="100px">
+                  <mat-card-content>
+                    <p>
+                      Opis programa...
+                    </p>
+                  </mat-card-content>
+                 
+                </mat-card>
+
+              </div>
+              <div class="pagg">
+                <mat-paginator [length]="100"
+                [pageSize]="10"
+                [pageSizeOptions]="[5, 10, 25, 100]"
+                aria-label="Select page">
+                </mat-paginator>
+                
+              </div>
             </div>
-        </mat-sidenav-content>
-    </mat-sidenav-container>
+          </div>
+      </mat-sidenav-content>
+  </mat-sidenav-container>
 </body>
+
+
+<!--
+
+
+
+-->
