@@ -15,4 +15,5 @@ public interface UserService {
     User createUser(UserRequest userRequest);
     Optional<User> getUser(Integer id);
     void delete(Integer id);
+    Optional<User> getUsersByUsername(String username);
 }

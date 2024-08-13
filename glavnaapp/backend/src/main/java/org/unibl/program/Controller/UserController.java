@@ -13,7 +13,7 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
-@Controller
+@RestController
 @RequestMapping("/user")
 public class UserController {
     UserService userService;
@@ -29,7 +29,14 @@ public class UserController {
         User user = userService.createUser(userRequest);
         return new ResponseEntity<>(user, HttpStatus.CREATED);
     }
-
+    @GetMapping("/userName")
+    public Integer getUserbyNameId() {
+        List<User> users = userService.getAll();
+        User user = users.get(users.size() - 1);
+        Optional<User> tmp = Optional.ofNullable(user);
+        //Optional<User> user = userService.getUsersByUsername(userName);
+        return user.getIdUser();
+    }
     @GetMapping("/{id}")
     public ResponseEntity<User> getUser(@PathVariable("id") Integer id) {
         Optional<User> user = userService.getUser(id);

@@ -14,7 +14,7 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
-@Controller
+@RestController
 @RequestMapping("/subscription")
 public class SubscriptionController {
     SubscriptionService subscriptionService;

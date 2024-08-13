@@ -75,3 +75,20 @@ body {
 .form button:hover {
     background-color: rgb(88, 56, 250); 
 }
+.btm {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 6px;
+}
+
+.lbl {
+    display: inline-flex;
+    position: relative;
+    padding-top: 20px;
+    padding-left: 200px;
+    color: rgb(130, 106, 251);
+    cursor: pointer;
+}
+.lbl:hover {
+    color: rgb(88, 56, 250);
+}

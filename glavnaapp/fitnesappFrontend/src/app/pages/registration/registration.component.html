@@ -16,10 +16,10 @@
             </div>
             <div class="input-box">
                 <label for="usrPassword">Lozinka</label>
-                <input formControlName="password" type="text" id="usrPassword" placeholder="Unesite lozinku" style="height: 40px;" required/>
+                <input formControlName="password" type="password" id="usrPassword" placeholder="Unesite lozinku" style="height: 40px;" required/>
             </div>
             <div class="input-box">
-                <input type="text" id="usrPassword2" placeholder="Potvrdite lozinku" style="height: 40px;" required/>
+                <input type="password" id="usrPassword2" placeholder="Potvrdite lozinku" style="height: 40px;" required/>
             </div>
             
             <div class="input-box">
@@ -40,10 +40,16 @@
                             <option>Trebinje</option>
                         </select>
                     </div>
-                    <button id="usrAvatar" class="btn" style="color: white; height: 40px;">Avatar</button>
+                    <div class="input-box">
+                        <form [formGroup]="form2">
+                    <input formControlName="content" type="file" class="chsfile" style="height: 40px; margin-top: 0; background-color: white;"> 
+                </form >
+                </div>
+                    <!-- <button id="usrAvatar" class="btn" style="color: white; height: 40px;">Avatar</button> -->
                 </div>
             </div>
             <button class="btn2" style="height: 45px;" type="submit" (click)="add()">Submit</button>
+            
         </form>
     </section>
 </body>

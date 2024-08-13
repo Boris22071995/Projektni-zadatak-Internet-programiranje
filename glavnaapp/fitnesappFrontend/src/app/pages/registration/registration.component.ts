@@ -11,6 +11,7 @@ export class RegistrationComponent implements OnInit {
   constructor(private userService: UserService,
               private formBuilder: FormBuilder) { }
     public form: FormGroup = new FormGroup({});
+    public form2: FormGroup = new FormGroup({});
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       userName: [null],
@@ -22,13 +23,19 @@ export class RegistrationComponent implements OnInit {
       programIdProgram: 1,
       city:[null]
     });
+    this.form2 = this.formBuilder.group({
+      content:[null],
+      useridUser:[null]
+    });
   }
 
   public add() {
+    
     console.log(this.form.value);
-    this.userService.addUser(this.form.value).subscribe((res) => {
-      console.log(res);
-    })
+    console.log(this.form2.value);
+    // this.userService.addUser(this.form.value).subscribe((res) => {
+    //   console.log(res);
+    // })
   }
 
 
