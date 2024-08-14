@@ -59,11 +59,19 @@ export class RegistrationComponent implements OnInit {
   }
 
   public add() {
-    this.userService.addUser(this.form.value).subscribe((res) => {
+    
+    this.userService.addUser(this.form.value).subscribe((res:User) => {
       this.user = res;
       console.log(res);
+      this.avatar={
+        "content": this.form2.value.content,
+        "useridUser" :this.user.idUser
+      }
+      this.avatarService.addAvatar(this.avatar).subscribe((reess:Avatar)=>{
+        console.log(reess);
+      })
+      
     });
-    console.log(this.user);
     
   }
 
