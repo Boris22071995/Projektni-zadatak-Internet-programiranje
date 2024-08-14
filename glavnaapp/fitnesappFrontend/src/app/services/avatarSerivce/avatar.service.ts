@@ -11,21 +11,12 @@ import { environment } from 'src/environments/environment';
 export class AvatarService {
 
   constructor(private http: HttpClient) { }
-
+  
   url = environment.apiUrl;
   
-  public getUser() {
-    return this.http.get(this.url + "/user/userName");
-  }
-
-  public async temp() :Promise<any> {
-    var pageNr = await this.getUser().toPromise();
-    return pageNr;
-  }
-
   public addAvatar(avatarItem: Avatar): Observable<Avatar> {
-    avatarItem.useridUser=1;
-    return this.http.post<Avatar>(this.url + "/userAvatar", avatarItem);
+
+    return this.http.post<Avatar>(this.url + "/userAvatar", avatarItem, {headers: environment.headerOption});
   }
 
 }

@@ -30,12 +30,10 @@ public class UserController {
         return new ResponseEntity<>(user, HttpStatus.CREATED);
     }
     @GetMapping("/userName")
-    public Integer getUserbyNameId() {
+    public User getUserbyNameId() {
         List<User> users = userService.getAll();
         User user = users.get(users.size() - 1);
-        Optional<User> tmp = Optional.ofNullable(user);
-        //Optional<User> user = userService.getUsersByUsername(userName);
-        return user.getIdUser();
+        return user;
     }
     @GetMapping("/{id}")
     public ResponseEntity<User> getUser(@PathVariable("id") Integer id) {

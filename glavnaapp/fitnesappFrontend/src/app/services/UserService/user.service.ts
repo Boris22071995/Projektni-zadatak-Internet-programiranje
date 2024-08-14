@@ -12,6 +12,10 @@ export class UserService {
 
   url = environment.apiUrl;
 
+  public getUser(){
+    return this.http.get<User>(this.url + "/user/userName");
+  }
+
   public addUser(userItem: User): Observable<User> {
     return this.http.post<User>(this.url + "/user",userItem);
   }

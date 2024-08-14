@@ -1,11 +1,11 @@
 export interface User {
-    // idUser: number;
+    idUser: number;
     userName: string;
     password: string;
     firstName: string;
     lastName: string;
     email: string;
-    isActivated: boolean;
-    programIdProgram: number;
     city: string;
+    programIdProgram: number;
+    isActivated: boolean; 
 }
