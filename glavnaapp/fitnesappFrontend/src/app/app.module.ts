@@ -23,7 +23,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatPaginatorModule} from '@angular/material/paginator';
-
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 
 @NgModule({
@@ -34,7 +34,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     LoginComponent,
     RegistrationComponent,
     GoogleLoginCardComponent,
-    MainComponent
+    MainComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +52,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatInputModule,
     MatCardModule,
     MatPaginatorModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    NgxCaptchaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -48,6 +48,10 @@
                     <!-- <button id="usrAvatar" class="btn" style="color: white; height: 40px;">Avatar</button> -->
                 </div>
             </div>
+           
+                <ngx-recaptcha2 #captchaElem [siteKey]="siteKey">
+                </ngx-recaptcha2>
+             
             <button class="btn2" style="height: 45px;" type="submit" (click)="add()">Submit</button>
             
         </form>

@@ -12,9 +12,12 @@ import { UserService } from 'src/app/services/UserService/user.service';
 export class RegistrationComponent implements OnInit {
  public user: User | null = null;
  public avatar: Avatar | null = null;
+ siteKey:string;
   constructor(private userService: UserService,
               private formBuilder: FormBuilder,
-              private avatarService: AvatarService) {}
+              private avatarService: AvatarService) {
+                this.siteKey = "6LcKbyoqAAAAAL5tcLK--xWFNcLT5XzSaEHFWNF8";
+              }
     public form: FormGroup = new FormGroup({});
     public form2: FormGroup = new FormGroup({});
   ngOnInit(): void {
@@ -57,6 +60,9 @@ export class RegistrationComponent implements OnInit {
       console.log(res);
     });
   }
+
+  showsuccesMessage = false;
+  message="";
 
   public add() {
     
