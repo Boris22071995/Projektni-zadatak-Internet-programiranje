@@ -1,12 +1,12 @@
 <body>
   <mat-toolbar color="#C0C0C0;" class="navtop">
       <mat-toolbar-row>
-          <button mat-icon-button>
-              <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+          <button mat-icon-button (click)="sidenav.toggle();">
+              <mat-icon >menu</mat-icon>
           </button>
           <h1>Fitnes online</h1>
           <div class="column">
-          <button mat-icon-button class="logbut">
+          <button mat-icon-button class="logbut" routerLink="/login">
               <!-- <label for="logButt">Prijava</label> -->
             <a routerLink="/login">  <mat-icon name="logButt" title="Prijava">login</mat-icon>  </a>         
           </button>
@@ -22,7 +22,7 @@
               <a mat-list-item>About us</a>
               <a mat-list-item>Contact us</a>
               <a mat-list-item>Help</a>
-              <a mat-list-item><input type="search" placeholder="Pretraga" class="search-input"><mat-icon>search</mat-icon></a>
+              <a mat-list-item><input type="search" placeholder="Pretraga" class="search-input" style="width: 80%;"><mat-icon fontIcon="search" style="justify-content: right;"></mat-icon></a>
               <a mat-list-item>
                 <select class="select-box">
                 <option hidden>Sortiraj</option>
@@ -174,9 +174,3 @@
   </mat-sidenav-container>
 </body>
 
-
-<!--
-
-
-
--->
