@@ -40,9 +40,16 @@ public class User {
     private String city;
     @Basic
     @Column(name = "isActivated")
-    private boolean isActivated;
+    private  Byte isActivated;
     @Basic
     @Column(name = "programIdProgram")
     private Integer programIdProgram;
+    @Basic
+    @Column(name = "pinCode")
+    private Integer pinCode;
 
+
+    public void setActivated(Byte active) {
+        this.isActivated = active;
+    }
 }

@@ -16,4 +16,6 @@ public interface UserService {
     Optional<User> getUser(Integer id);
     void delete(Integer id);
     Optional<User> getUsersByUsername(String username);
+    User updatePincode(User user);
+    User updateActive(User user, Byte active);
 }

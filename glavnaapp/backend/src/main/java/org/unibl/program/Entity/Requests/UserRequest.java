@@ -15,6 +15,7 @@ public class UserRequest {
     private String lastName;
     private String email;
     private String city;
-    private boolean isActivated;
+    private Byte isActivated;
     private Integer programIdProgram;
+    private Integer pinCode;
 }

@@ -11,30 +11,16 @@ import org.unibl.program.Service.EmailService;
 @Slf4j
 @Service
 public class EmailServiceImpl implements EmailService {
-
-    private static final String  NO_REPLY_ADDRESS = "webshopip79@gmail.com";
-
-    private final JavaMailSender emailSender;
-
     @Autowired
-    public EmailServiceImpl(JavaMailSender emailSender) {
-        this.emailSender = emailSender;
-    }
+    private JavaMailSender javaMailSender;
 
-    @Async
     @Override
     public void sendMessage(String to, String subject, String text) {
-        try{
-            SimpleMailMessage message = new SimpleMailMessage();
-            message.setFrom(NO_REPLY_ADDRESS);
-            message.setTo(to);
-            message.setSubject(subject);
-            message.setText(text);
-
-            emailSender.send(message);
-            log.info("Activation mail sent");
-        }catch (MailException exception){
-            log.warn("Unable to send an email to: " + to);
-        }
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setFrom("onlinefitness119@gmail.com");
+        message.setTo(to);
+        message.setText(text);
+        message.setSubject(subject);
+        javaMailSender.send(message);
     }
 }
